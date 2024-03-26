@@ -1,0 +1,71 @@
+form {
+  margin: 2rem auto;
+}
+
+.form-element {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-element+.form-element {
+  margin-top: 0.5rem;
+}
+
+form input {
+  width: 85px;
+  padding: 5px;
+  border-width: 1px;
+  border-color: var(--color1);
+  background-color: var(--color5);
+  color: #000000;
+  border-style: solid;
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px rgba(66,66,66,.75);
+  text-shadow: 0px 0px 6px rgba(66,66,66,.51);
+}
+
+form input:focus {
+  outline-color: var(--color3);
+}
+
+.form-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.form-button{
+  background: linear-gradient(to right, var(--color5) , var(--color2));
+  background-color: var(--color5);
+  color: #000000;
+  font-family: Trebuchet MS;
+  font-size: 18px;
+  font-weight: 800;
+  font-style: normal;
+  text-decoration: none;
+  padding: 14px 15px;
+  border: 0px solid #000;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .form-button span{
+  margin-right: 15px;
+  display: block;
+  width: 29px;
+  height: 29px;
+  background-image: url(../images/calculator.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(0deg);
+ }
+ .form-button:hover{
+  background: linear-gradient(to right,var(--color4) , var(--color1));
+  background-color: var(--color4);
+ }
+ .form-button:active{
+  transform: scale(0.95);
+ }

@@ -46,3 +46,16 @@ body {
   font-family: 'Exo-2', 'Geneva', sans-serif;
   font-size: 16px;
 }
+
+main {
+  margin: 2rem 1rem;
+  padding: 2rem;
+  background-color: var(--bg-color-main);
+  border-radius: 5px;
+}
+
+span {
+  color: var(--color1);
+  font-weight: bold;
+  text-transform: uppercase;
+}

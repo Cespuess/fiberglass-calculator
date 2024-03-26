@@ -1,67 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/favicon-tank.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="./styles/common.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <title>Fiberglass Calculator</title>
-  </head>
-  <body>
-    <header>
-      <h1>Fiberglass Calculator</h1>
-    </header>
 
-    <main>
-      <section id="description">
-        <div id="image-tank"></div>
-        <p>¡Saludos, <span>refibradores</span>!!!</p>
-        <p>Os presentamos la aplicación para calcular la cantidad de fibra y doble cámara que necesitaréis aplicar en vuestro depósitos.</p><br>
-        <p>Simplemente introducid los parámetros siguientes en sus respectivos campos, ¡y listos!</p><br>
-        <p>Altura del depósito <span>(ad)</span>, longitud del depósito: <span>(ls)</span>, altura de la pieza de fibra: <span>(af)</span>, anchura pieza de fibra: <span>(wf)</span> y ancho de la pieza de doble cámara: <span>(wdc)</span>.</p>
-      </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/favicon-tank.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="./styles/common.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/description.css">
+  <link rel="stylesheet" href="styles/form.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <title>Fiberglass Calculator</title>
+</head>
+
+<body>
+  <header>
+    <h1>Fiberglass Calculator</h1>
+  </header>
+
+  <main>
+    <section class="description">
+      <div id="image-tank"></div>
+      <p>¡Saludos, <span>refibradores</span>!!!</p>
+      <p>Os presentamos la aplicación para calcular la cantidad de fibra y doble cámara que necesitaréis aplicar en
+        vuestro depósitos.</p><br>
+      <p>Simplemente introducid las medidas en <span>centímetros</span> en sus respectivos campos, ¡y listos!</p><br>
       
-      <section id="data-input">
-        <form id="form-calculate">
-          <div class="form-element form__height-tank">
-            <label for="height-tank">HT:</label>
-            <input type="text" name="height-tank" id="height-tank" required>
-          </div>
-          <div class="form-element form__width-tank">
-            <label for="length-tank">LS:</label>
-            <input type="text" name="length-tank" id="length-tank" required>
-          </div>
-          <div class="form-element form__height-fiber">
-            <label for="height-fiber">AF:</label>
-            <input type="text" name="height-fiber" id="height-fiber" required>
-          </div>
-          <div class="form-element form__width-fiber">
-            <label for="width-fiber">WF</label>
-            <input type="text" name="width-fiber" id="width-fiber" required>
-          </div>
-          <div class="form-element form__width-air-chamber">
-            <label for="width-air-chamber">WDC:</label>
-            <input type="text" name="width-air-chamber" id="width-air-chamber" required>
-          </div>
-          <div id="button-container">
-            <button type="submit">Calcular</button>
-          </div>
-        </form>
-      </section>
+    </section>
 
-      <section id="data-output">
+    <section class="data-input">
+      <form id="form-calculate">
+        <div class="form-element form__height-tank">
+          <label for="height-tank">Altura del depósito:</label>
+          <input type="text" 
+            name="height-tank" 
+            id="height-tank" 
+            pattern="^[0-9]{0,12}([.][0-9]{1,2})?$" 
+            required>
+        </div>
 
-      </section>
-    </main>
+        <div class="form-element form__width-tank">
+          <label for="length-tank">Longitud del depósito:</label>
+          <input type="text" 
+            name="length-tank" 
+            id="length-tank" 
+            pattern="^[0-9]{0,12}([.][0-9]{1,2})?$" 
+            required>
+        </div>
 
-    <footer>
-      <h3>Cespuess Developper</h3>
-    </footer>
+        <div class="form-element form__height-fiber">
+          <label for="height-fiber">Altura pieza fibra:</label>
+          <input type="text" 
+            name="height-fiber" 
+            id="height-fiber" 
+            pattern="^[0-9]{0,12}([.][0-9]{1,2})?$" 
+            required>
+        </div>
 
-    <script type="module" src="index.js"></script>
-  </body>
+        <div class="form-element form__width-fiber">
+          <label for="width-fiber">Ancho pieza fibra:</label>
+            <input type="text" 
+            name="width-fiber" 
+            id="width-fiber" 
+            pattern="^[0-9]{0,12}([.][0-9]{1,2})?$" 
+            required>
+        </div>
+
+        <div class="form-element form__width-air-chamber">
+          <label for="width-air-chamber">Ancho pieza doble cámara:</label>
+          <input type="text" 
+            name="width-air-chamber" 
+            id="width-air-chamber" 
+            pattern="^[0-9]{0,12}([.][0-9]{1,2})?$" 
+            required>
+        </div>
+
+        <div class="form-button-container">
+          <button type="submit" class="form-button"><span></span>Calcular</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="data-output">
+
+    </section>
+  </main>
+
+  <footer>
+    <h3>Cespuess Developper</h3>
+  </footer>
+
+  <script type="module" src="index.js"></script>
+</body>
+
 </html>
