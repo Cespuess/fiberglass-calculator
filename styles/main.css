@@ -1,8 +1,29 @@
 main {
+  margin: 2rem 1rem;
+  padding: 2rem;
+  background-color: var(--bg-color-main);
+  border-radius: 5px;
+}
 
+span {
+  color: var(--color1);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#description {
+  position: relative;
 }
 
 #image-tank {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin: 0px auto;
+  height: 160px;
+  background-image: url(../images/tank.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
 }

@@ -17,32 +17,39 @@
     </header>
 
     <main>
+      <section id="description">
+        <div id="image-tank"></div>
+        <p>¡Saludos, <span>refibradores</span>!!!</p>
+        <p>Os presentamos la aplicación para calcular la cantidad de fibra y doble cámara que necesitaréis aplicar en vuestro depósitos.</p><br>
+        <p>Simplemente introducid los parámetros siguientes en sus respectivos campos, ¡y listos!</p><br>
+        <p>Altura del depósito <span>(ad)</span>, longitud del depósito: <span>(ls)</span>, altura de la pieza de fibra: <span>(af)</span>, anchura pieza de fibra: <span>(wf)</span> y ancho de la pieza de doble cámara: <span>(wdc)</span>.</p>
+      </section>
+      
       <section id="data-input">
-      
-          <img src="images/tank.png" alt="tank">
-      
         <form id="form-calculate">
           <div class="form-element form__height-tank">
-            <label for="height-tank">Altura:</label>
+            <label for="height-tank">HT:</label>
             <input type="text" name="height-tank" id="height-tank" required>
           </div>
           <div class="form-element form__width-tank">
-            <label for="width-tank">Longitud:</label>
-            <input type="text" name="width-tank" id="width-tank" required>
+            <label for="length-tank">LS:</label>
+            <input type="text" name="length-tank" id="length-tank" required>
           </div>
           <div class="form-element form__height-fiber">
-            <label for="height-fiber">Altura pieza fibra:</label>
+            <label for="height-fiber">AF:</label>
             <input type="text" name="height-fiber" id="height-fiber" required>
           </div>
           <div class="form-element form__width-fiber">
-            <label for="width-fiber">Anchura pieza fibra</label>
+            <label for="width-fiber">WF</label>
             <input type="text" name="width-fiber" id="width-fiber" required>
           </div>
           <div class="form-element form__width-air-chamber">
-            <label for="width-air-chamber">Anchura pieza doble cámara:</label>
+            <label for="width-air-chamber">WDC:</label>
             <input type="text" name="width-air-chamber" id="width-air-chamber" required>
           </div>
-          <button type="submit">Calcular</button>
+          <div id="button-container">
+            <button type="submit">Calcular</button>
+          </div>
         </form>
       </section>
 
