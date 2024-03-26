@@ -40,9 +40,8 @@ form input:focus {
   background: linear-gradient(to right, var(--color5) , var(--color2));
   background-color: var(--color5);
   color: #000000;
-  font-family: Trebuchet MS;
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 1.2rem;
+  font-weight: bold;
   font-style: normal;
   text-decoration: none;
   padding: 14px 15px;

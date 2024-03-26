@@ -1,0 +1,7 @@
+header {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  color: var(--color3);
+  text-shadow: 13px -7px 9px var(--color2);
+}
