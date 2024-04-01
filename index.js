@@ -2,6 +2,7 @@ import { fiberglassCalculate } from "./fiberglass-calculator/fiberglass-calculat
 
 document.addEventListener('DOMContentLoaded', () => {
   const calculateForm = document.querySelector('#form-calculate');
+  const outputData = document.querySelector('.output-data');
 
   fiberglassCalculate(calculateForm);
 })

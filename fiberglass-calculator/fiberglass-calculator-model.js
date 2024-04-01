@@ -1,11 +1,11 @@
 export function getFormData(calculateForm) {
-  let heightTank = calculateForm.querySelector('#height-tank');
-  let lengthTank = calculateForm.querySelector('#length-tank');
-  let heightFiber = calculateForm.querySelector('#height-fiber');
-  let widthFiber = calculateForm.querySelector('#width-fiber');
-  let widthAirChamber = calculateForm.querySelector('#width-air-chamber');
+  let heightTankElement = calculateForm.querySelector('#height-tank');
+  let lengthTankElement = calculateForm.querySelector('#length-tank');
+  let heightFiberElement = calculateForm.querySelector('#height-fiber');
+  let widthFiberElement = calculateForm.querySelector('#width-fiber');
+  let widthAirChamberElement = calculateForm.querySelector('#width-air-chamber');
 
-  return { heightTank, lengthTank, heightFiber, widthFiber, widthAirChamber};
+  return { heightTankElement, lengthTankElement, heightFiberElement, widthFiberElement, widthAirChamberElement};
 }
 
 export function getCircumference(height) {

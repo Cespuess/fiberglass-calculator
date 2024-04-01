@@ -18,6 +18,7 @@ export function fiberglassCalculate(calculateForm) {
     const fiberPieces = getFiberPieces(circumference, lengthTank, heightFiber, widthFiber);
     const airChamberPieces = getAirChamberPieces(circumference, lengthTank, widthAirChamber);
     
+    return {circumference, volume, fiberPieces, airChamberPieces};
   })
 }
 
