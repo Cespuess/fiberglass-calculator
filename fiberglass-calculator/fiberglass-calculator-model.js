@@ -38,9 +38,29 @@ export function getFiberPieces(circumference, lengthTank, heightFiber, widthFibe
   numTours = Math.ceil(numTours);
 
   return piecesTour * numTours - piecesToSubstract;
+}
 
-
-  function getPiecesToSubstract(number) {
-    return Math.floor(number / 2)
+export function getAirChamberPieces(circumference, lengthTank, widthAirChamber) {
+  let defaultPieces = 3;
+  let piecesToSubstract = 0;
+  let heightAirChamberPiece = Math.ceil(circumference / defaultPieces);
+  while (heightAirChamberPiece > 150) {
+    defaultPieces++;
+    heightAirChamberPiece = Math.ceil(circumference / defaultPieces);
   }
+  
+  let numTours = lengthTank / widthAirChamber;
+  if ((numTours - Math.floor(numTours)) * 10 != 0 && (numTours - Math.floor(numTours)) * 10 < 4) {
+    piecesToSubstract += getPiecesToSubstract(defaultPieces);
+  }
+  
+  numTours = Math.ceil(numTours);
+
+  const totalAirChamber = defaultPieces * numTours - piecesToSubstract;
+
+  return {pieces: totalAirChamber, height: heightAirChamberPiece}
+}
+
+function getPiecesToSubstract(number) {
+  return Math.floor(number / 2)
 }
