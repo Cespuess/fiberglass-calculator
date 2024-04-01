@@ -1,10 +1,15 @@
 import { fiberglassCalculate } from "./fiberglass-calculator/fiberglass-calculator-controller.js";
+import { outputDataController } from "./output-data/outputDataController.js";
 
 document.addEventListener('DOMContentLoaded', () => {
   const calculateForm = document.querySelector('#form-calculate');
-  const outputData = document.querySelector('.output-data');
+  const outputData = document.querySelector('.data-output');
 
-  fiberglassCalculate(calculateForm);
+  calculateForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = fiberglassCalculate(calculateForm);
+    outputDataController(outputData, data);
+  })
 })
 
 window.addEventListener('offline', () => {
