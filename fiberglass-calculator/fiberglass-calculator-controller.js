@@ -35,6 +35,10 @@ function validateForm(...param) {
       renderError(element, 'No puede ser 0.'); 
       res = false;   
     }
+    else if (element.value < '6') {
+      renderError(element, 'No puede ser menor que 6.'); 
+      res = false; 
+    }
     else if (!validateRegex(element.value)) {
       renderError(element, 'Solo centímetros, máximo un decimal.');
       res = false;
@@ -63,11 +67,4 @@ function resetElement(element) {
   errorElement.innerHTML = '';
 }
 
-// -----------comprobar input vacío
-// -----------comprobar input 0
-// -----------comprobar input regex
-// -----------hacer función que imprima el error
-// -----------hacer función que haga el borde rojo del input
-// -----------borrar el mensaje de error
-// -----------hacer que el form-element sea wrap  y que el error quede debajo
-// mirar que devuelve para que en el index no se ejecute la función de imprimir el resultado
+
