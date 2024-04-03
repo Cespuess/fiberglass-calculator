@@ -35,13 +35,13 @@ function validateForm(...param) {
       renderError(element, 'No puede ser 0.'); 
       res = false;   
     }
-    else if (element.value < '6') {
-      renderError(element, 'No puede ser menor que 6.'); 
-      res = false; 
-    }
     else if (!validateRegex(element.value)) {
       renderError(element, 'Solo centímetros, máximo un decimal.');
       res = false;
+    }
+    else if (parseFloat(element.value) < 6) {
+      renderError(element, 'No puede ser menor que 6.'); 
+      res = false; 
     }
     else resetElement(element);
   });
@@ -49,7 +49,7 @@ function validateForm(...param) {
 }
 
 function validateRegex(value) {
-  const regex = new RegExp('^[0-9]{0,12}([.][1-9]{1})?$');
+  const regex = new RegExp('^[0-9]{0,12}([.][0-9]{1})?$');
   return regex.test(value);
 }
 
