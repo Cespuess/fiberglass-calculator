@@ -41,6 +41,7 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  justify-items: center;
   background: rgb(7,3,151);
   background: linear-gradient(187deg, rgba(7,3,151,1) 0%, rgba(7,225,255,1) 88%);
   font-family: 'Exo-2', 'Geneva', sans-serif;
@@ -48,6 +49,7 @@ body {
 }
 
 main {
+  max-width: 800px;
   margin: 2rem 1rem;
   padding: 2rem;
   background-color: var(--bg-color-main);

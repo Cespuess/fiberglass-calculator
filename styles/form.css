@@ -86,3 +86,9 @@ form input.input-error {
  .form-button:active{
   transform: scale(0.95);
  }
+
+ @media (width > 470px) {
+  .form-element label {
+    width: 80%;
+  }
+ }
