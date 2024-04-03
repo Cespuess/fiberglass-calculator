@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   calculateForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const data = fiberglassCalculate(calculateForm);
-    outputDataController(outputData, data);
+    if (Object.keys(data).length !== 0) outputDataController(outputData, data);
   })
 })
 

@@ -4,12 +4,26 @@ form {
 
 .form-element {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 
 .form-element+.form-element {
   margin-top: 0.5rem;
+}
+
+.form-element label {
+  width: 60%;
+}
+
+.form-element .error:empty {
+  display: none;
+}
+
+.form-element .error {
+  color: red;
+  font-size: 0.6rem;
 }
 
 form input {
@@ -27,6 +41,10 @@ form input {
 
 form input:focus {
   outline-color: var(--color3);
+}
+
+form input.input-error {
+  border-color: red
 }
 
 .form-button-container {
